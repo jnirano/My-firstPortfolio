@@ -1,0 +1,825 @@
+/* ======= BASIC SETUPS	 ======= */
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	background-color: #f3efef;
+	color: #555;
+	font-weight: 450;
+	line-height: 1.7;  
+	text-rendering: optimizeLegibility;
+	/* padding: 0 1rem 1rem 1rem; */
+}
+
+
+/* ======= REUSEABLE COMPONENT ======= */
+
+/* ======= NAVIGATION BAR ======= */
+
+.main-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #1b348e;
+	height: 7em;
+	color: #fff;
+	padding-right: 9em;
+}
+
+.nav-logo {
+	max-width: 140px;
+	height: auto;
+	width: 100%;
+	padding: 0 3em;
+}
+.nav-logo:hover{
+	animation: moveInLeft 1s ease-in-out;
+}
+
+.nav-logo:hover{
+	transition: color 0.35s ease-in-out;
+	color: #af6c6c;
+}
+.nav-links li {
+	display: inline-block;
+}
+
+.nav-links li a  {
+	margin-right: 1.1em;
+	padding: 0.5em;
+}
+
+li, a {
+	color: #fff;
+	list-style: none;
+	text-decoration: none;
+	font-size: 1.4em;
+	font-weight: 400;
+}
+
+.nav-links li a:hover,
+.nav-links li a:active {
+	background-color: #4b49ce;
+	color: #e06f6f;;
+	transition: color .45s ease-in;
+}
+
+.nav-links li a:visited {
+	border: 1px solid transparent;
+	transition: border-bottom 0.9s;
+	font-size: 2.1rem;
+}
+
+.nav-home{
+	text-align: center;
+	text-transform: initial;
+	margin: 0;
+}
+@media only screen and (max-width: 665px) {
+  /* For mobile phones: */
+  li, a {
+		font-size: 1.3em;
+		margin-right: .2em;
+		display: flex;
+		justify-items: flex-end;
+  }
+  h1 {
+		font-weight: 400;
+		margin-top: 1.3rem;
+		color: #4a3ca3;
+		font-size: 4.2rem;
+		word-spacing: .3rem;
+		line-height: 1.1;
+	}
+
+	.nav-logo {
+		max-width: 110px;
+		height: auto;
+		width: 80%;
+		padding: 0 1.2em;
+	}
+
+	cite {
+		margin-top: 1.4rem;
+	}
+	.q-img {
+		height: 55px;
+	}
+
+.photo-home{
+	height: 11rem;
+}
+
+.dev {
+		font-size: 2.1rem;
+	}
+
+	.first-name, 
+	last-name {
+		font-size: 5rem;
+	}
+
+	q {
+		padding: 1.5%;
+		margin-top: 1rem;
+		font-style: italic;
+		font-size: 1.85rem;
+		line-height: 1;
+		letter-spacing: 0rem;
+		font-weight:400;
+	}
+}
+
+@media only screen and (max-width: 563px) {
+   .nav-links {
+		font-size: .9rem;
+		margin-right: .2em;
+		display: flex;		
+  }
+  .logoBlack {
+	  display: none;
+  }
+}
+
+@media only screen and (max-width: 864px) {
+		.name{
+		font-weight: 400;
+		font-size: 1rem;
+	}
+
+	.name-line{
+		max-width: 4rem;
+		border-width: .11rem;
+		margin-top:3%;
+	}
+
+	.btnCert {
+		display: none;
+	}
+	
+	.btnCV{
+		border-radius: 5rem; 
+		background-color: #4ac29e;
+		padding: .4rem;
+	}
+}
+
+h1 {
+	font-weight: 650;
+	margin-top: 2.5rem;
+	color: #4a3ca3;
+	font-size: 7.2rem;
+	word-spacing: .8rem;
+}
+
+.first-name,
+.last-name{
+	animation: moveInRight 1.2 ease-in;
+}
+@keyframes moveInRight{
+	0% { 
+		opacity: 0;
+		transform: translateX(10rem);
+	}
+
+	80% {
+		transform: translateX(-1.4rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+.last-name{
+	color: #ad4242;
+}
+
+h2{
+	font-weight: 700;
+	color: #4a3ca3;
+	font-size: 3.5rem;
+	word-spacing: 0.1rem;
+	margin-top: 0rem;
+}
+
+blockquote {
+	color: #181616;
+	padding: 2%;
+	margin-top: 1rem;
+	font-style: italic;
+	line-height: 155%;
+	position: relative;
+	font-size: 1.95rem;
+	line-height: 3rem;
+	letter-spacing: .1rem;
+	font-weight:650;
+}
+
+cite {
+	font-size: 100%;
+	margin-top: 2rem;
+	display: block;
+	color: #333;
+}
+
+cite img {
+	height: 65px;
+	border-radius: 50%;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.photo-home{
+	height: 12rem;
+}
+
+.header-social{
+	display: flex;
+	justify-content: center;
+}
+
+.social-links {
+	color: #ad4242;
+	padding-right: 1.5rem;
+	margin-top: 1.5rem;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.social-links:hover{
+	transition: background-color 0.2s, border 0.2s, color 0.2s ease-in;
+	color: #4a3ca3;
+	border: 1px solid #888;
+}
+	
+/* 
+To do list For the HEADER & NAV BAR
+1. Add animation direction for texts, moveleft or bottom quotation, images & social media links in the home page
+3. Put quotation mark on the quotes by bill gates
+*/
+
+/* ======= ABOUT ME ======= */
+
+.my-about{
+	margin-right: 22rem;
+}
+
+.allAbout1{
+	animation-name: moveInLeft;
+	animation-duration: 1.2s;
+	animation-delay: .2s;
+}
+@keyframes moveInLeft{
+	0% { 
+		opacity: 0;
+		transform: translateX(-10rem);
+	}
+
+	80% {
+		transform: translateX(1.4rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+.myIntro,
+.dev-type{
+	animation: moveInLeft .8s ease-out .3s;
+}
+
+.my-pics{
+	display: inline-block;
+	height: auto;/*43rem;*/
+	max-width: 500px;
+	width: 80%;
+	margin-top: 3.5rem;
+	margin-left: 17%;
+	border-radius: 15px;
+	box-shadow: #8d8585;
+}
+
+.name{
+	text-align: center;
+	margin-top: 1.2rem;
+	font-weight: 500;
+	font-size: 2rem;
+	color: #1b1616;
+	margin-bottom: 0rem;
+	animation-iteration-count: infinite;
+	animation-name: heartBeat;
+	animation-duration: 1s;
+}
+
+.name-line{
+	display: block;
+	max-width: 6rem;
+	border-width: .181rem;
+	border-bottom-width: solid;
+	border-color: #c0b6b6; 
+	border-style: inset;
+	margin-left: 43%;
+	margin-top:5%;
+	box-shadow: 0 2rem 2rem #8d8585;
+}
+
+.chat-me{
+	color: #1b1616;
+	font-weight: 600;
+	font-size: 3.5em;
+	text-align: center;
+	margin-top: 4.5rem;
+	margin-bottom: 1.8rem;
+}
+
+.my-links{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.link1{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0%;
+}
+
+.link1 li a i{
+	margin-right: 1.05rem
+}
+
+.ion-social-github{
+	color:  #a108a1;
+	background-color:#f3efef;
+	font-size: 4rem;
+	border-radius: 50%;
+}
+
+.ion-social-twitter{
+	color: #1da1f2;
+	display: inline-block;
+	font-size: 4rem;
+}
+
+.ion-social-linkedin{
+	color: #007bb0;
+	background-color:#f3efef;
+	font-size: 4rem;
+	border-radius: 50%;
+}
+
+.ion-social-codepen{
+	color: #181616;
+	background-color:#f3efef;
+	font-size: 4rem;
+	
+}
+
+.ion-social-codepen:hover,
+.ion-social-twitter:hover{
+	opacity: 0.65;
+	transition: opacity 0.25s ease-out;
+	color: #1b1616;
+}
+
+.ion-social-github:hover{
+	background-color: #f3efef;
+	color: #1b1616;
+	opacity: 0.95;
+}
+
+.ion-social-linkedin:hover{
+	background-color: #f0f3f5;
+	color: #1b1616;
+	opacity: 0.9;
+}
+
+.b-end,
+.allAbout{
+	padding-left: 4.5em;
+	animation: moveInBottom 1s ease-out;
+	backface-visibility: hidden;
+}
+@keyframes moveInBottom{
+	0% { 
+		opacity: 0;
+		transform: translateY(10rem);
+	}
+
+	80% {
+		transform: translateY(-1.5rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+.heading-about{
+	color: #1b1616;
+	font-weight: 600;
+	font-size: 3.5em;
+	margin: 0;
+}
+
+.myIntro{
+	margin-top: 4rem; 
+}
+
+.para-about{
+	color: #1b1616;
+	font-weight: 250;
+	font-size: 1.7em;
+	margin-bottom: 1.2rem;
+}
+
+#educate{
+	margin-top: 1rem
+}
+
+.mainEdu-lines{
+	display: block;
+	max-width: 95%;
+	border-width: .032239rem;
+	border-color: #7ec9f7;
+}
+
+.main-edu{
+	margin-left: 4rem;
+	overflow-y: scroll;
+	width: 100%;
+	height: 21.5rem;
+}
+
+.my-edu:hover{
+	background-color: #f0f3f5;
+	border-width: .0333239rem;
+	border-color: #7ec9f7;
+	transition: color .15s ease-in;
+	opacity: 0.55;
+}
+
+.my-edu{
+	display: flex;
+	align-items: center;
+}
+
+
+.ms-cert,
+.certificates{
+	margin-top: 2.7%;
+}
+
+.ms1-logo,
+.nse1-logo{
+	font-size: 8%;
+	height: 5rem;
+}
+
+.cert-logo{
+	height: 6.5rem;
+}
+
+.ion-university{
+	font-size: 5.3rem;
+	margin-right: 8%;
+}
+
+.uni-ilorin{
+	margin-left: .4%;
+}
+
+.edu{
+	color: #1b1616;
+	font-size: 1.55em;
+	font-weight: 550;
+	align-items: center;
+}
+
+.sub-edu{
+	font-size: 1.4rem;
+	font-weight: 350; 
+	color: #555;
+}
+
+.years{
+	color: #357edd;
+}
+
+.ms-cert, 
+.certificates{
+	margin-bottom: 1.5%;
+	margin-right: 1.2%;
+}
+
+.btn-about{
+	margin-top: 3.5%;
+	margin-bottom: 1.5%;
+	margin-left: 13.4%; 
+}
+
+.btnCV{
+	text-align: center;
+	color: #fff;
+	border: 1px solid #080e55;
+	border-radius: 8rem; 
+	background-color: #3953b1;
+	padding: 1rem;
+}
+
+.btnCert{
+	color: #2015b6;
+	font-weight: bold;
+	border: 1px solid #2015b6;
+	border-radius: 8rem;
+	padding: 1rem;
+	margin-left: 10%;
+}
+
+.btnCert:hover,
+.btnCV:hover{
+	transition: all .2s;
+	transform: scaleX(1.5) scaleY(2.3);
+	background-color: #15245c;
+	color: #0cbb5b;
+	box-shadow: 0 2rem 2rem rgb(141, 133, 133);
+}
+	
+
+/* ======= MY SKILLS ======= */
+
+ .my-skills{
+	margin: 4rem auto;
+}
+
+.all-skills{
+	background-image: linear-gradient(to right bottom, rgba(228, 226, 243, 0.8),
+	rgba(181, 183, 184, 0.8)), url("../images/landscape.jpeg");
+	margin: 0rem 25%;
+	border-radius: 15px;
+	border: 1px solid #dae2e9;
+}
+
+.skills-heading,
+.top-skills{
+	text-align: center;
+	padding: 1.5rem;
+	font-size: 1.75rem;
+}
+
+.skills-line{
+	border-width: 0.11rem;
+	border-color: #b7c6cf;
+	max-width: 7rem;
+	margin-left: 43%;
+	margin-top: 1.5%;
+}
+
+.s4{
+	display: inline-block;
+	color: #1b1616;
+	font-size: 2.3rem;
+	line-height: 1.2%;
+	word-spacing: 5%;
+	letter-spacing: 0.13rem;
+	margin: 1.3rem 0;
+	font-weight: 450;
+	margin-right: 1.6%;
+}
+
+.s4:hover{
+	color: #167fc0;
+	opacity: 0.72;
+}
+
+.allMySkills{
+	font-size: 1.5rem;
+	color: #1b1616;
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+}
+
+.f-end,
+.b-end,
+.o-soft{
+	margin: 4rem 0;
+	margin-right: 1.3%;
+	border-radius: 15px;
+	border: 0.8px solid #dae2e9;
+	border-width: 0.0566rem;
+	text-align: center;
+	padding: 2.5rem;
+}
+
+.heading-skills{
+	margin-bottom: 3.5%;
+	font-size: 2.7rem;
+}
+
+.front,
+.back,
+.others{
+	margin-top: 2rem;
+}
+
+.frontHeading,
+.backHeading,
+.otherHeading,
+.backSkills,
+.frontSkills,
+.softSkills{
+	color: #1b1616;
+	font-weight: 400;
+}
+
+.other-logo,
+.front-logo{
+	height: 3.3rem;
+	padding-bottom: .1rem;
+}
+
+.back-logo{
+	height: 4rem;
+}
+
+.lines{
+	max-width: 5.5rem;
+	margin-left: 40%;
+	border-width: 0.22rem;
+	box-shadow: 0 1.5rem 0.2rem #8d8585;
+}
+
+.f-end{
+	animation: moveInLeft 1s ease-in;
+	animation-delay: .1s;
+}
+
+.o-soft,
+.my-names{
+	animation: moveInRight .8s ease-out .3s;
+	animation-delay: .1s;
+}
+
+.softSkills,
+.backSkills,
+.frontSkills{
+	font-size: 2.1rem;
+}
+
+.backSkills:hover{
+	color: #0f9939;
+	font-size: 2.2rem;
+	opacity: 0.75;
+	transition: color .16s ease-out;
+}
+
+.softSkills:hover,
+.frontSkills:hover{
+	color: orangered;
+	opacity: 0.65;
+	transition: color .16s ease-out;
+}
+
+.frontSkills:hover{
+	font-size: 2.2rem;
+}
+
+.softSkills:hover{
+	font-size: 2.1rem;
+}
+
+/* ======= MY PORTFOLIOS ======= */
+
+.my-projects{
+	margin: 2.5rem 9.5rem;
+}
+.only-pfolio {
+	display: flex;
+	justify-content: center;
+}
+@media only screen and (max-width: 925px) {
+  /* For mobile phones: */
+  .only-pfolio {
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+  }
+}
+
+.portfolios,
+.portfolios1{
+	border: 1px solid #dbd7d7;
+	max-width: 520px;
+	margin-right: 10%;
+}
+
+.portfolios1{
+	margin-right: 0;
+	margin-bottom: 2rem;
+}
+
+.p2{
+	margin-left: 45%;
+}
+
+.project-pic img{
+	max-width: 548px;
+	height: auto;
+	width: 100%;
+	margin-bottom: .8rem;
+}
+
+.about-project,
+.languages-used,
+.project-Description{
+	margin-left: 3rem;
+}
+
+.dev-type,
+.p-name{
+	color: #181616;
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 0rem;
+}
+
+.dev-type{
+	font-size: 1.9rem;
+	margin-left: 4rem;
+	text-transform: uppercase;
+}
+.p-language {
+	padding:0 .5rem .5rem .5rem
+}
+
+.languages-used{
+	font-size: 1.7rem;
+	font-weight: 548; 
+	color: #333;
+}
+
+.about-project{
+	font-size: 1.7rem;
+	letter-spacing: .25rem;
+	font-weight: 500;
+}
+
+.about-project1{
+	font-size: 1.35rem;
+	letter-spacing: .1rem;
+	margin-left: 3rem;
+}
+
+.btn-projects{
+	margin-top: 4.5%;
+	margin-left: 28%;
+	padding-bottom: 2rem;
+	align-items: center;
+}
+
+.btn-live{
+ color: #fbf;
+ background-color: #3737f8;
+ font-size: 1.6rem;
+ letter-spacing: .1rem;
+ border-radius: 8rem;
+ border: 1px solid #2015b6;
+ padding: 1rem 2.5rem;
+}
+
+.btn-gitHub{
+	color: #fbf;
+	background-color: #3737f8;
+	letter-spacing: .1rem;
+	border: 1px solid #2015b6;
+	border-radius: 8rem;
+	padding: 1rem 2rem;
+	margin-left: 6%;
+	font-size: 1.5rem;
+}
+
+.btn-gitHub:hover,
+.btn-live:hover{
+	transition: all .2s;
+	background-color: #15245c;
+	color: #09ca60;
+}

@@ -1,0 +1,1 @@
+    <!-- p class="about-project">A background color generator for choosing your own color input either in hexadecimal or  with a single click to generate color of your choice. </p> --
